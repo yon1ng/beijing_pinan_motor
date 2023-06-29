@@ -20,4 +20,4 @@
 
 ## 问题反馈
 
-如果您在使用过程中遇到任何问题，欢迎在[Issues](https://github.com/yon1ng/beijing_pinan_motor/issues)中提出。我们会尽快回复并解决您的问题。
+如果您在使用过程中遇到任何问题，欢迎在[Issues](https://github.com/yon1ng/beijing_pinan_motor/issues)中提出。我们会尽快回复并解决您的问题。如果项目帮助到你，欢迎给我们一个Star。~~~~
