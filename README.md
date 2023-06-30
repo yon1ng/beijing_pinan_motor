@@ -15,9 +15,14 @@
    - `contactName`：您的姓名
    - `contactTelephone`：您的手机号
    - `vehicleNo`：您的车牌号。车牌号格式应为：京A-12345 或 京B-12345。如果车牌号中包含字母，字母需要大写
-   - `sessionId`和`signature`：这两个参数需要从微信小程序抓包得到。具体的抓包方法请自行百度搜索。
+   - `sessionId`和`signature`：这两个参数需要从平安门店微信小程序抓包得到在请求头中可以找到。具体的抓包方法请自行百度搜索。
 3. 运行`main.py`文件。如果提示1501，那么表示`sessionId`和`signature`参数设置正确。此时，您可以按回车键开始自动预约。
+
+## 注意事项
+
+- 平安的预约号是每个工作日下午5点放后两个工作日的号。~~~~
+- 抓取到的`sessionId`如果不执行操作进行刷新的话，有效期大概半小时左右，建议提前20分钟左右再抓取。
 
 ## 问题反馈
 
-如果您在使用过程中遇到任何问题，欢迎在[Issues](https://github.com/yon1ng/beijing_pinan_motor/issues)中提出。我们会尽快回复并解决您的问题。如果项目帮助到你，欢迎给我们一个Star。~~~~
+如果您在使用过程中遇到任何问题，欢迎在[Issues](https://github.com/your-repo/issues)中提出。我们会尽快回复并解决您的问题。
