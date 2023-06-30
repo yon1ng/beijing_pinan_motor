@@ -64,6 +64,10 @@ def booking(date, start_time, end_time, id_booking_survey):
     }
     res = requests.post(booking_url, headers=book_headers, json=body)
     print(res.text)
+    if 'success' in res.text:
+        print('预约成功')
+        input('按回车键结束程序')
+        exit()
 
 
 # 测试
