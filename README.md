@@ -11,9 +11,9 @@
 请按照以下步骤操作：
 
 1. 运行main.py。小白不会配置环境可以直接在[这里](https://github.com/yon1ng/beijing_pinan_motor/releases/tag/v1.0)直接下载可执行程序运行
-2. 按照输入您的手机号，姓名，车牌号等信息，如下图所示：![image](img/step1.png)
-3. 请打开PC微信平安产险门店小程序点击我的预约 会自动获取sessionId，如下图所示：![image](img/step2.png)
-4. 按回车键开始自动循环预约，如下图所示：![image](img/step3.png)
+2. 按照输入您的手机号，姓名，车牌号等信息，如下图所示：![image](./img/step1.png)
+3. 请打开PC微信平安产险门店小程序点击我的预约 会自动获取sessionId，如下图所示：![image](./img/step2.png)
+4. 按回车键开始自动循环预约，如下图所示：![image](./img/step3.png)
 
 enjoy it！
 
