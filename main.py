@@ -4,6 +4,7 @@
 # @Site    : 平安傻瓜式预约抢号
 # @Software: PyCharm
 import json
+import threading
 import time
 
 import requests
@@ -74,6 +75,9 @@ class Callback:
             print('预约成功')
             input('按回车键结束程序')
             exit()
+        # 如果返回-10004则继续预约
+        elif '10004' in res.text:
+            Callback.booking(date, start_time, end_time, id_booking_survey)
 
     def Http(SunnyContext, requestId, MessageId, messageType, requestType, requestUrl, errMessage, pid):
         SyHTTP = SyNet.MessageIdToSunny(MessageId)
@@ -84,7 +88,7 @@ class Callback:
                 Callback.signature = SyHTTP.request.get_header_single("signature")
                 if Callback.sessionId != "" and Callback.signature != "":
                     print("获取成功 sessionId=" + Callback.sessionId + " signature=" + Callback.signature)
-                    print("开始测试是否有效(返回-10004和-1501即为正常)")
+                    print("开始测试是否有效(返回-1501即为正常)")
                     Callback.booking("2023年06月25日 星期日", "10:00", "11:00", "FE8C62EA019420BDE0533106A8C00423")
                     input('按回车键开始预约')
                     Sunny.stop_proxy()
@@ -101,8 +105,8 @@ class Callback:
                                     for i in data['bookingRules']:
                                         if i['bookableNum'] > 0:
                                             print(i['startTime'], '-', i['endTime'], '剩余号数：', i['bookableNum'])
-                                            Callback.booking(data['bookingDate'], i['startTime'], i['endTime'],
-                                                    i['idBookingSurvey'])
+                                            t = threading.Thread(target=Callback.booking, args=(data['bookingDate'], i['startTime'], i['endTime'], i['idBookingSurvey']))
+                                            t.start()
                                 else:
                                     print('无号')
                             print('----------------------------------------------------')
