@@ -27,10 +27,10 @@
 
 ### Mac/Linux用户
 
-如果您会抓包的话或者需要在mac linux等操作系统运行的话，请参照以下步骤：
+如果您会抓包且需要在mac linux等操作系统运行的话，请参照以下步骤：
 
 1. 自行抓包获取sessionId和signature
-2. 修改pinanManual.py中为*的参数其中contactName为姓名，contactPhone为手机号，plateNo为车牌号，sessionId为抓包获取的sessionId，signature为抓包获取的signature
+2. 修改pinanManual.py中为*的参数其中contactName为姓名，contactTelephone为手机号，vehicleNo为车牌号，sessionId为抓包获取的sessionId，signature为抓包获取的signature(格式请参考上面的图片)
 3. 运行pinanManual.py
 
 enjoy it！
